@@ -1383,6 +1383,7 @@
         <spotbugs.effort>Default</spotbugs.effort>
         <spotbugs.skip>false</spotbugs.skip>
         <spotbugs.onlyAnalyze>org.eclipse.jetty.*</spotbugs.onlyAnalyze>
+        <spotbugs.fork>false</spotbugs.fork>
         <pmd.verbose>false</pmd.verbose>
       </properties>
       <modules>
@@ -1418,6 +1419,7 @@
                 </goals>
                 <phase>verify</phase>
                 <configuration>
+                  <fork>${spotbugs.fork}</fork>
                   <skip>${spotbugs.skip}</skip>
                   <failOnError>${spotbugs.failOnError}</failOnError>
                   <xmlOutput>true</xmlOutput>
